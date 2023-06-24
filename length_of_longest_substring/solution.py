@@ -5,11 +5,9 @@ class Solution:
         for i in range(len(s)):
             char = s[i]
             if char in indexes and indexes[char] >= offset:
-                window = i - offset
                 offset = indexes[char] + 1  # found a repeat
-                longest = max(window, longest)
+
+            window = i - offset + 1
             indexes[char] = i
-        return max(longest, (len(s) - offset))
-
-
-s = "abbbcdde"
+            longest = max(window, longest)
+        return longest
