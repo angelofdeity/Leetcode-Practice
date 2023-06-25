@@ -1,9 +1,8 @@
 class Solution:
     def longest_palindrome(self, s: str) -> str:
         indexes = {}
-        offset = max_length = 0
-        if len(s) == 1:
-            return s
+        offset = 0
+        max_length = 1
         for i in range(len(s)):
             char = s[i]
             if char in indexes:
@@ -26,4 +25,4 @@ class Solution:
         return s
 
 
-print(Solution().longest_palindrome('b'))
+print(Solution().longest_palindrome('babababab'))
