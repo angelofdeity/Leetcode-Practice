@@ -8,7 +8,6 @@ class Solution:
             if char in indexes:
                 offset = indexes[char]
                 if result := self.is_palindrome(s[offset:i + 1]):
-                    # print(result)
                     window = len(result)
                     max_length = max(window, max_length)
             else:
@@ -24,6 +23,3 @@ class Solution:
                 return None
             j -= 1
         return s
-
-
-print(Solution().longest_palindrome('radar'))
