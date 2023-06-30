@@ -2,6 +2,7 @@ class Solution:
     def longest_palindrome(self, s: str) -> str:
         indexes = {}
         offset = 0
+        window = 0
         max_length = 1
         for i in range(len(s)):
             char = s[i]
@@ -9,9 +10,10 @@ class Solution:
                 offset = indexes[char]
                 if result := self.is_palindrome(s[offset:i + 1]):
                     print(result)
-                    length = len(result)
-                    max_length = max(length, max_length)
+                    window = len(result)
+                    max_length = max(window, max_length)
             indexes[char] = i
+        print()
         return s[offset:offset + max_length]
 
     def is_palindrome(self, s):
