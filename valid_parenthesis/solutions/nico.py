@@ -1,4 +1,4 @@
-class Solution:
+class Solution1:
     """
     Possibe solution 1
     Use a stack to keep track of the opening brackets.
@@ -6,7 +6,7 @@ class Solution:
     If the stack is empty, return True.
     """
 
-    def isValid(self, s: str) -> bool:
+    def is_valid(self, s: str) -> bool:
         stack = []
         for c in s:
             if c in '[{(':
@@ -24,7 +24,7 @@ class Solution:
         return True if not stack else False
 
 
-class Solution:
+class Solution2:
     """
     Possible solution 2
     Use a stack to keep track of the opening brackets.
@@ -33,7 +33,7 @@ class Solution:
     If the stack is empty, return True.
     """
 
-    def isValid(self, s: str) -> bool:
+    def is_valid(self, s: str) -> bool:
         stack = []
         pair = {
             '(': ')',
