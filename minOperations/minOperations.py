@@ -1,0 +1,1 @@
+def minOperations(n):
